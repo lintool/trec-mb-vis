@@ -18,7 +18,7 @@ Bar graph shows binned distribution of relevant documents.</p>
 
 for (var i=51; i<=110; i++) {
   if (i == 76) continue;
-  plot(i, dataset[i]);
+  plot(i, dataset[i]["qrels"], dataset[i]["query"]);
 }
 
 </script>

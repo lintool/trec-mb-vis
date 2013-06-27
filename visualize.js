@@ -1,4 +1,4 @@
-function plot(topic, data) {
+function plot(topic, data, query) {
 var w = 800;
 var h = 60;
 var days = 18;
@@ -52,7 +52,7 @@ var xAxis = d3.svg.axis()
 var svg =
   d3.select("body")
     .append("svg")
-    .attr("width", w)
+    .attr("width", w + 200)
     .attr("height", h);
 
 var barWidth = (w - leftPadding - rightPadding) / (days*4);
@@ -93,9 +93,8 @@ svg.append("g")
    .call(xAxis);
 
 svg.append("text")
-  .text(topic).attr("x", w-rightPadding+5).attr("y", h-bottomPadding)
+  .text(topic + ": " + query).attr("x", w-rightPadding+5).attr("y", h-bottomPadding)
   .attr("font-family", "sans-serif")
-  .attr("font-weight", "bold")
   .attr("font-size", "14px")
   .attr("fill", "black");
 
