@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scatterplot</title>
+<script type="text/javascript" src="d3.v2.min.js"></script>
+<script type="text/javascript" src="qrels.js"></script>
+<script type="text/javascript" src="visualize.js"></script>
+<link rel="stylesheet" href="visualize.css" type="text/css" />
+</head>
+<body>
+<h2>Visualizing All Relevance Judgments</h2>
+
+<p><b>Key:</b> green = relevant documents, red = highly relevant documents, gray = non-relevant documents.<br/>
+Bar graph shows binned distribution of relevant documents.</p>
+
+<script type="text/javascript">
+
+for (var i=1; i<=49; i++) {
+  plot(i, dataset[i]);
+}
+
+</script>
+</body>
+</html>
